@@ -1,0 +1,1 @@
+az network vnet create --resource-group myResourceGroup --name myVnet --address-prefix 192.168.0.0/16 --subnet-name mySubnet --subnet-prefix 192.168.1.0/24

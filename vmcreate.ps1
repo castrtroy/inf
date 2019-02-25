@@ -1,0 +1,1 @@
+az group deployment create --resource-group myResourceGroup --template-uri https://raw.githubusercontent.com/azure/azure-quickstart-templates/master/101-vm-sshkey/azuredeploy.json
