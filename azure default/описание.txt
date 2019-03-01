@@ -1,0 +1,38 @@
+Deploy a simple Ubuntu Linux VM
+ 
+Автор: Brian Moore
+
+Последнее обновление: 04.02.2019
+
+Развертывание в Azure  Посмотрите на GitHub
+
+This template allows you to deploy a simple Linux VM using a few different options for the Ubuntu version, using the latest patched version. This will deploy a A1 size VM in the resource group location and return the FQDN of the VM.
+
+Этот шаблон Azure Resource Manager (ARM) был создан участником сообщества, а не Майкрософт. Каждый шаблон ARM лицензирован для вас в соответствии с условиями лицензионного соглашения с владельцем, а не с Майкрософт. Майкрософт не несет ответственности за шаблоны ARM, предоставленные и лицензированные членами сообщества, и не отслеживает их безопасности, совместимости или производительности. Шаблоны ARM, созданные сообществом, не поддерживаются ни в соответствии с какой-либо программой поддержки Майкрософт, ни какими-либо службами поддержки Майкрософт и предоставляются КАК ЕСТЬ без каких-либо гарантий.
+
+Параметры
+ИМЯ ПАРАМЕТРА	ОПИСАНИЕ
+
+adminUsername	User name for the Virtual Machine.
+
+authenticationType	Type of authentication to use on the Virtual Machine. SSH key is recommended.
+
+adminPasswordOrKey	SSH Key or password for the Virtual Machine. SSH key is recommended.
+
+dnsLabelPrefix	Unique DNS Name for the Public IP used to access the Virtual Machine.
+
+ubuntuOSVersion	The Ubuntu version for the VM. This will pick a fully patched image of this given Ubuntu version.
+
+location	Location for all resources.
+
+Использование шаблона
+
+PowerShell
+
+New-AzureRmResourceGroupDeployment -Name <deployment-name> -ResourceGroupName <resource-group-name> -TemplateUri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-linux/azuredeploy.jsonУстановка и настройка служб Azure PowerShell
+
+Командная строка
+
+azure config mode arm
+
+azure group deployment create <my-resource-group> <my-deployment-name> --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-linux/azuredeploy.json

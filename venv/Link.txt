@@ -1,0 +1,4 @@
+https://docs.microsoft.com/en-us/azure/virtual-machines/windows/ps-template
+
+
+az vm create --resource-group myResourceGroup --name myVM --image UbuntuLTS --admin-username azureuser --generate-ssh-keys
